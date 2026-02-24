@@ -8,15 +8,13 @@ void numberOfDigit(int n)
     while (n > 0)
     {
         int lastDigit;
-        lastDigit = n % 10; // its for extraction of digit
+        lastDigit = n % 10; // its for extraction of digits from the last
         n = n / 10;
         count += 1;
     }
     cout << count << endl;
 }
-
-// 0r
-
+// 0R alternative approach to count digits
 int numOfDig(int n)
 {
     int count = (int)(log10(n) + 1);
@@ -81,7 +79,6 @@ int printAllDivisor(int n)
     for (auto it : ls)
         cout << it << " ";
 }
-
 int primeNumber(int n)
 {
     int count = 0;
@@ -114,16 +111,20 @@ int gcdAndHcf(int n1, int n2)
     return gcd;
 }
 
-int euclideanAlgo(int a,int b){
-    while (a>0 & b>0)
+int euclideanAlgo(int a, int b)
+{
+    while (a > 0 & b > 0)
     {
-        if(a>b) a= a%b;
-        else b=b%a;
+        if (a > b)
+            a = a % b;
+        else
+            b = b % a;
     }
-    if(a==0) return b;
-    else return a; 
+    if (a == 0)
+        return b;
+    else
+        return a;
 }
-
 
 int main()
 {
@@ -136,15 +137,14 @@ int main()
     // amstFrongNumber(n);
     // printAllDivisor(n);
     // primeNumber(n);
-
     // int n1=48;
     // int n2=18;
     // int result = gcdAndHcf(n1, n2);
     // cout << "GCD of " << n1 << " and " << n2 << " is: " << result << endl;
 
-    int a=20, b=15;
-    int result = euclideanAlgo(a,b);
-    cout<<result<<endl;
+    int a = 20, b = 15;
+    int result = euclideanAlgo(a, b);
+    cout << result << endl;
 
     return 0;
 }
