@@ -2,16 +2,16 @@
 
 using namespace std;
 
-// Q1
+// Q1 print name n times 
 void printName(int i, int n)
 {
     if (i > n)
         return;
-    cout << "megh" << endl;
+    cout << "sounak" << endl;
     printName(i + 1, n);
 }
 
-// Q2
+// Q2 print 1 to N
 void print1toN(int i, int n)
 {
     if (i > n)
@@ -20,7 +20,7 @@ void print1toN(int i, int n)
     print1toN(i + 1, n);
 }
 
-// Q3
+// Q3 print N to 1
 void printNto1(int i, int n)
 {
     if (i < 1)
@@ -29,7 +29,7 @@ void printNto1(int i, int n)
     printNto1(i - 1, n);
 }
 
-// Q4 by Back Tracking
+// Q4 print 1 to N by Back Tracking
 
 void print1tonbybacktrak(int i, int n)
 {
@@ -39,7 +39,7 @@ void print1tonbybacktrak(int i, int n)
     cout << i << endl;
 }
 
-// Q5 by backTracking
+// Q5 print N to 1 by backTracking
 void printNto1ByBackTrack(int i, int n)
 {
     if (i > n)
