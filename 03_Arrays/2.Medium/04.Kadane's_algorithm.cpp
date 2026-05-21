@@ -17,13 +17,13 @@ Explanation: The subarray [1] has the largest sum 1.
 
 /*
 OPTIMAL APPROACH KADANE'S ALGORITHM:-
--> Initialize two variables: maxSum and currentSum. Set both variables to the first element of the array.
+-> Initialize two variables: maxi and sum. Set both variables to the first element of the array.
 -> Iterate through the array starting from the second element:
-    Update currentSum by adding the current element to it.
-    If currentSum becomes negative, reset it to 0. This step ensures that we consider only the subarrays with positive sums.
-    Update maxSum by taking the maximum value between maxSum and currentSum. This keeps track of the maximum subarray sum encountered so far.
--> After the iteration, the maxSum variable will hold the largest sum of any subarray.
--> Return the maxSum as the result.
+    Update sum by adding the current element to it.
+    If sum becomes negative, reset it to 0. This step ensures that we consider only the subarrays with positive sums.
+    Update maxi by taking the maximum value between maxi and sum. This keeps track of the maximum subarray sum encountered so far.
+-> After the iteration, the maxi variable will hold the largest sum of any subarray.
+-> Return the maxi as the result.
 */
 
 // CODE:-
