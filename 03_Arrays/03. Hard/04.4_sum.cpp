@@ -1,5 +1,5 @@
 /*
-QUESTION:
+QUESTION: https://leetcode.com/problems/4sum/description/
 Given an array nums of n integers, return an array of all the unique quadruplets [nums[a], nums[b], nums[c], nums[d]] such that:
 - 0 <= a, b, c, d < n
 - a, b, c, and d are distinct.
@@ -117,12 +117,12 @@ vector<vector<int>> fourSum(vector<int> &nums, int target)
     vector<vector<int>> ans;
     sort(nums.begin(), nums.end());
 
-    for (int i = 0; i < n - 3; i++)
+    for (int i = 0; i < n; i++)
     {
         if (i > 0 && nums[i] == nums[i - 1])
             continue;
 
-        for (int j = i + 1; j < n - 2; j++)
+        for (int j = i + 1; j < n; j++)
         {
             if (j > i + 1 && nums[j] == nums[j - 1])
                 continue;
