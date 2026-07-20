@@ -1,5 +1,5 @@
 /*
-QUESTION:
+QUESTION: https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/
 Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value.
 
 If target is not found in the array, return [-1, -1].
@@ -19,14 +19,17 @@ APPROACH:
 
 CODE:
 */
+#include <bits/stdc++.h>
+using namespace std;
 
-vector<int> searchRange(vector<int>& nums, int target) {
+vector<int> searchRange(vector<int> &nums, int target)
+{
     int first = lower_bound(nums.begin(), nums.end(), target) - nums.begin();
     // if the target is not found, return [-1, -1]
     if (first == nums.size() || nums[first] != target)
         return {-1, -1};
     int last = upper_bound(nums.begin(), nums.end(), target) - nums.begin();
-    return {first, last-1};
+    return {first, last - 1};
 }
 
 // TIME COMPLEXITY: O(log n)

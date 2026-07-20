@@ -19,19 +19,23 @@ Explanation: The given array is sorted.
 
 CODE:
 */
+#include <bits/stdc++.h>
+using namespace std;
 
-bool solve(int arr[], int low, int high) {
+bool solve(int arr[], int low, int high)
+{
     if (low >= high)
         return true;
-    
+
     int mid = low + (high - low) / 2;
     if (arr[mid] <= arr[mid + 1] && solve(arr, low, mid) && solve(arr, mid + 1, high))
         return true;
-    
+
     return false;
 }
 
-bool arraySortedOrNot(int arr[], int n) {
+bool arraySortedOrNot(int arr[], int n)
+{
     return solve(arr, 0, n - 1);
 }
 
