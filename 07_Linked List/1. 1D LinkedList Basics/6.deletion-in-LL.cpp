@@ -1,6 +1,5 @@
-
 #include <bits/stdc++.h>
-    using namespace std;
+using namespace std;
 
 class Node
 {
@@ -62,7 +61,7 @@ Node *removeHead(Node *head)
     return head;
 }
 
-// Remove the last node
+// Remove the last node / tail of the linked list
 Node *removeTail(Node *head)
 {
     if (head == NULL || head->next == NULL)
@@ -99,21 +98,20 @@ Node *removeK(Node *head, int k)
 
     Node *temp = head;
     Node *prev = NULL;
-
     int cnt = 1;
 
     while (temp != NULL)
     {
+        cnt++;
         if (cnt == k)
         {
-            prev->next = temp->next;
+            prev->next = temp->next->next;
             delete temp;
             break;
         }
 
         prev = temp;
         temp = temp->next;
-        cnt++;
     }
 
     return head;
